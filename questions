@@ -24,3 +24,11 @@ general: do I need an yeild here to get to layout?
 config.rb
 [6] why do I need to say db/when we're already in db?
 answer: because we actually run this in our root file
+
+---
+## have to think about
+
+polymorphic associations -- two types of comments
+
+erb partials
+
