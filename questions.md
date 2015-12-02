@@ -1,24 +1,24 @@
 ## Questions:
----
+
 ## In models/
 general question - join tables make themselves? Must I seed them?
 
 article.rb :
 line.2 can I just do  -  has_many :sections :comments
 answer: no I cannot. has_many is a method that takes 1 argument
----
+
 ## In views/
 
 layout.erb : 
 line.1 this will be the changing html etc. for dynamic section of page?
----
+
 ## In public/
 
 index.html :
 general: do I need an yeild here to get to layout?
 
 line.1 this will be the html etc. for whole page (skeleton)?
----
+
 ## In db/
 
 config.rb
