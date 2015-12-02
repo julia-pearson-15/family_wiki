@@ -1,4 +1,4 @@
-# ![] Get the Record 
+#  Get the Record 
 
 ## Overview
 Get the Record will be an interactive web app that stores a family's history, folklore, and interactions. Each article, which focuses on an event or person will be editable by any other member of the site so that the family can build a comprehesive (and conflicting) narrative. The comment sections of each article will also allow for lively debate.
