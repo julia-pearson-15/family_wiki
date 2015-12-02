@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
   has_many :sections
   has_many :comments
   #establishes author connection
-  belongs_to :users
+  belongs_to :user
   #go to join table!
-  has_and_belongs_to_many :cetegories
+  has_and_belongs_to_many :categories
 end

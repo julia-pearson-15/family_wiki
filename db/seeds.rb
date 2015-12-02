@@ -1,12 +1,31 @@
 require_relative "config"
 
-# to be filled out!!!
+# Dir.glob("models/*.rb").each do |path|
+#   to_delete = path.split("/")[1]
+#   to_delete = to_delete.split(".")[0]
+#   puts to_delete.capitalize()
+#   to_delete.destroy_all()
+# end 
 
-to_seed_data_table_name = [
-  {key_1: "xxxx", key_2: "xxxx", key_3: "xxxx", key_4: "xxxx",},
-  # etc.
-]
+Article.destroy_all
+Category.destroy_all
+Comment.destroy_all
+Section.destroy_all
+User.destroy_all
 
-to_seed_class_name.create(to_seed_data_table_name)
+a1 = Article.create({name: "Oklahoma Porch", date_created: "12/05/2014", edit_date: "12/05/2014"})
+a2 = Article.create({name: "ny ", date_created: "12/11/2014", edit_date: "12/05/2014"})
 
-# repeat
+c1 = Category.create({name: "Rumor"})
+
+a2.delete
+
+a1.categories.push(c1)
+
+# articles = [
+#   {name: "Oklahoma Porch", date_created: "12/05/2014", edit_date: "12/05/2014"},
+#   {name: "To New York", date_created: "06/05/1920", edit_date: "12/05/2014"},
+# ];
+
+
+# Article.create(articles);
