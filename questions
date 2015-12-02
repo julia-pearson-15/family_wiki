@@ -1,31 +1,26 @@
-questions:
-
-in models/
+## Questions:
+---
+## in models/
 general question - join tables make themselves? Must I seed them?
 
 article.rb :
 [2] can I just do  -  has_many :sections :comments
-
-
-
-
-in views/
+answer: no I cannot. has_many is a method that takes 1 argument
+---
+## in views/
 
 layout.erb : 
 [1] this will be the changing html etc. for dynamic section of page?
-
-
-
-in public/
+---
+## in public/
 
 index.html :
 general: do I need an yeild here to get to layout?
 
 [1] this will be the html etc. for whole page (skeleton)?
-
-
-
-in db/
+---
+## in db/
 
 config.rb
 [6] why do I need to say db/when we're already in db?
+answer: because we actually run this in our root file
