@@ -1,32 +1,32 @@
 ## Questions:
 ---
-## in models/
+## In models/
 general question - join tables make themselves? Must I seed them?
 
 article.rb :
 line.2 can I just do  -  has_many :sections :comments
 answer: no I cannot. has_many is a method that takes 1 argument
 ---
-## in views/
+## In views/
 
 layout.erb : 
 line.1 this will be the changing html etc. for dynamic section of page?
 ---
-## in public/
+## In public/
 
 index.html :
 general: do I need an yeild here to get to layout?
 
 line.1 this will be the html etc. for whole page (skeleton)?
 ---
-## in db/
+## In db/
 
 config.rb
 line.6 why do I need to say db/when we're already in db?
 answer: because we actually run this in our root file
 
 ---
-## have to think about
+## Things to think about
 
 polymorphic associations -- two types of comments
 
