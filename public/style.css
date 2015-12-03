@@ -1,1 +1,156 @@
 /*will be the style for header and general page layout*/
+body{
+  font-family: Interstate;
+}
+#logo{
+  width: 180px;
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 20px;
+  box-shadow: 2px 2px 2px #f2f2f2
+;
+}
+#login{
+  position: absolute;
+  right: 10%;
+  color: rgb(99,172,255);
+  text-decoration: none;
+}
+#topbar{
+  width: 100%;
+  height: 80px;
+}
+#toolbar{
+  float: right;
+  width: 70%;
+}
+.seperator{
+  width:10%;
+  height: 10px; 
+  float: left;
+}
+.nav{
+  color: rgb(255,73,76);
+  font-size: 20px;
+  height: 1px;
+  float: top;
+  text-decoration: none;
+}
+.with-bar{
+  text-align: center;
+  position: relative;
+  top: 10px;
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+.underline{
+  display: block;
+  margin: 0 auto;
+  width: 110px;
+}
+#dynamic{
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+}
+.listing{
+  list-style: none;
+  /*  height: 150px;*/
+  box-shadow: 2px 2px 2px #e6e6e6;
+  /*  border: solid;
+  border-color: lightgrey;
+  border-radius: 2px;
+  border-width: 1px;*/
+  padding: 15px;
+  position: relative;
+  right: 15px;
+}
+.name{
+  line-height: .5;
+  font-size: 25px;
+  line-height: 2;
+  color: rgb(255,73,76);
+  text-decoration: none;
+}
+.user{
+  display: block;
+  font-size: 18px;
+  line-height: .3;
+  color: rgb(99,172,255);
+  text-decoration: none;
+}
+.date{
+  width: 150px;
+  float: left;
+  color: grey;
+  font-size: 12px;
+  line-height: 0;
+}
+.content{
+  font-size: 16px;
+  color: grey;
+  display: block;
+}
+.article{
+  padding: 20px;
+  border: solid;
+  border-color: lightgrey;
+  border-radius: 2px;
+  border-width: 1px;
+
+}
+.edit-button{
+  /*height: 30px;*/
+  width: 30px;
+  border-radius: 3px;
+  background-color: rgb(99, 172, 255);
+  color: white;
+  position: relative;
+  bottom: 15px;
+  padding: 2px;
+  text-align: center;
+  font-size: 14px;
+}
+.sections{
+  list-style: none;
+  padding: 15px;
+}
+.section-name{
+
+  font-size: 20px;
+  color: rgb(255,73,76);
+  text-decoration: none;
+
+}
+.comment-section{
+  padding: 20px;
+  border: solid;
+  border-color: lightgrey;
+  border-radius: 2px;
+  border-width: 1px;
+}
+.header{
+  font-size: 16px;
+  color: grey;
+}
+.comment{
+  list-style: none;
+}
+.sections{
+  list-style: none;
+}
+.name{
+  line-height: 2;
+  font-size: 25px;
+}
+.comment{
+  padding: 0px;
+  list-style: none;
+  font-size: 15px;
+}
+
+

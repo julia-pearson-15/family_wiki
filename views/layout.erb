@@ -2,9 +2,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Getting Dynamic</title>
+  <title>Get the Record</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 </head>
 <body>
-  <% yield %>
+  <div id="topbar">
+    <a id="login" href="/login">Log In</a>
+    <img id="logo" src="/img/logo.jpg">
+    <div id="toolbar">
+      <div class="with-bar">
+        <a href="/" class="nav">Articles</a href="/">
+        <img class="underline" src="/img/underline2.jpg">
+      </div> <!-- with-bar -->
+      <div class="seperator"></div>
+      <div class="with-bar">
+        <a href="/categories" class="nav">Categories</a href="/">
+        <img class="underline" src="/img/underline2.jpg">
+      </div> <!-- with-bar -->
+      <div class="seperator"></div>
+      <div class="with-bar">
+        <a href="/users" class="nav">Users</a href="/">
+        <img class="underline" src="/img/underline2.jpg">
+      </div> <!-- with-bar -->
+    </div>
+  </div> <!-- toolbar -->
+  <div id="dynamic">
+    <%= yield %>
+  </div> <!-- dynamic -->
+  <script type="text/javascript" src="/main.js"></script>
 </body>
 </html>
+

@@ -1,4 +1,31 @@
 ## Questions:
+
+How do I make my layout's stylesheet apply to all pages/have seperate ones for each page.
+Is there a less labor intensive way of seeding?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 ## in models/
 general question - join tables make themselves? Must I seed them?

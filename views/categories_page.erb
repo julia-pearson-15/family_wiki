@@ -1,0 +1,8 @@
+<ul>
+  <% @categories.each do |category| %>
+    <li class="listing">
+      <a class="name" href="/categories/<%= category.id %>"> <%= category.name %> </a>
+    </li>
+    <p></p>
+  <%end%>
+</ul>

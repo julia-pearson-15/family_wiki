@@ -1,0 +1,32 @@
+<div class="article">
+  <p class="name"> <%= @article.name %> </p>
+  <a class="user" href="/article/<%= @article.id %>"><%=@article.user.name %></a>
+  <p class="date">date created: <%= @article.date_created %> </p>
+  <p class="date">last edited:  <%= @article.edit_date %> </p>
+  <ul class="sections">
+    <% @sections.each do |section| %>
+      <li>
+        <p class="section-name"> <%= section.name %> </p>
+        <div class="edit-button">Edit</div>
+        <p class="date">last edited:  <%= section.edit_date %> </p>
+        <p class="content"><%= section.body %></p>
+      </li>
+    <%end%>
+  </ul> <!-- section -->
+</div> <!-- article -->
+<p></p>
+<div class="comment-section">
+  <p class="header">Comments</p>
+  <p>--</p>
+  <ul class="comment">
+    <% @comments.each do |comment| %>
+    <li>
+      <p class="name"> <%= comment.name %> </p>
+      <a class="user" href="/article/<%= @article.id %>"><%=@article.user.name %></a>
+      <p class="date">last edited:  <%= comment.date_created %> </p>
+      <p class="content"><%= comment.body %></p>
+    </li>
+    <p>--</p>
+    <%end%> <!-- comment -->
+  </ul>
+</div> <!-- comment-section -->

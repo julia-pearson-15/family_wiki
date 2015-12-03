@@ -16,8 +16,9 @@ CREATE TABLE articles (
   name VARCHAR(255),
   date_created DATE,
   -- do I need an edit data when it's by section?
-  edit_date DATE
+  edit_date DATE,
   -- all this will be set up with active record to show relationships
+  user_id INTEGER REFERENCES users(id)
 );
 
 CREATE TABLE articles_categories (
@@ -29,7 +30,8 @@ CREATE TABLE sections (
   id INTEGER PRIMARY KEY,
   name VARCHAR(255),
   body TEXT,
-  edit_date DATE
+  edit_date DATE,
+  article_id INTEGER REFERENCES articles(id)
 );
 
 CREATE TABLE users (
@@ -46,7 +48,9 @@ CREATE TABLE comments (
   id INTEGER PRIMARY KEY,
   name VARCHAR(255),
   body TEXT,
-  date_created DATE
+  date_created DATE,
+  user_id INTEGER REFERENCES users(id),
+  article_id INTEGER REFERENCES articles(id)
 );
 
 
