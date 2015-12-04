@@ -1,5 +1,6 @@
-<form action="/new/article" method="POST">
+<form action="/articles/<%= @article.id %>/edit/<%= @section.id%>" method="POST">
+  <input type="hidden" name="_method" value="patch">
   <input class="editing-name" name="name" value="<%=@section.name%>">
   <input class="editing-body" name="body" value="<%=@section.body%>">
-  <button type="submit">Submit Changes</button>>
+  <button type="submit" value="update">Submit Changes</button>
 </form>

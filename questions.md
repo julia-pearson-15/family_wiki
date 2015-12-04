@@ -6,26 +6,7 @@ Is there a less labor intensive way of seeding?
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+editing, how to make show up?!
 
 ---
 ## in models/

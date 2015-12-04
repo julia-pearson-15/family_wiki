@@ -4,14 +4,13 @@
   <p class="date">date created: <%= @article.date_created %> </p>
   <p class="date">last edited:  <%= @article.edit_date %> </p>
   <ul class="sections">
-    <% @sections.each do |section| %>
+    <% @article.sections.each do |section| %>
       <li>
         <p class="section-name"> <%= section.name %> </p>
         <p class="date">last edited:  <%= section.edit_date %> </p>
-        <form action="/edit/<%= section.id %>" method="POST">
-          <button class="edit-button">Edit</button>
-        </form>
+        <a class="edit-button" href="/articles/<%= @article.id %>/edit/<%= section.id%>">Edit</a>
         <p class="content"><%= section.body %></p>
+<!--         <p class="content"><%= $markdown.render(section.body) %></p> -->
       </li>
     <%end%>
   </ul> <!-- section -->
@@ -19,12 +18,15 @@
 <p></p>
 <div class="comment-section">
   <p class="header">Comments</p>
+  <form action="/new/article" method="POST">
+    <button class="new-article">+</button>
+  </form>
   <p>--</p>
   <ul class="comment">
-    <% @comments.each do |comment| %>
+    <% @article.comments.each do |comment| %>
     <li>
       <p class="name"> <%= comment.name %> </p>
-      <a class="user" href="/article/<%= @article.id %>"><%=@article.user.name %></a>
+      <a class="user" href="/articles/<%= @article.id %>"><%=@article.user.name %></a>
       <p class="date">last edited:  <%= comment.date_created %> </p>
       <p class="content"><%= comment.body %></p>
     </li>

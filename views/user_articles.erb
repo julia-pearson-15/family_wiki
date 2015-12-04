@@ -3,7 +3,7 @@
   <p class="header"><%=@user.name%>'s articles:</p>
   <% @articles.each do |article| %>
     <li class="listing">
-      <a class="name" href="/article/<%= article.id %>"> <%= article.name %> </a>
+      <a class="name" href="/articles/<%= article.id %>"> <%= article.name %> </a>
       <a class="user" href="/users/<%= @user.id %>"><%=article.user.name %></a>
       <p class="date"> date created: <%= article.date_created %> </p>
       <p class="date"> last edited:  <%= article.edit_date %> </p>
