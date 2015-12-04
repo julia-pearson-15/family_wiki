@@ -1,14 +1,16 @@
 <div class="article">
-  <p class="name"> <%= @article.name %> </p>
-  <a class="user" href="/article/<%= @article.id %>"><%=@article.user.name %></a>
+  <p id="name"> <%= @article.name %> </p>
+  <a class="user" href="/users/<%= @article.user.id %>"><%=@article.user.name %></a>
   <p class="date">date created: <%= @article.date_created %> </p>
   <p class="date">last edited:  <%= @article.edit_date %> </p>
   <ul class="sections">
     <% @sections.each do |section| %>
       <li>
         <p class="section-name"> <%= section.name %> </p>
-        <div class="edit-button">Edit</div>
         <p class="date">last edited:  <%= section.edit_date %> </p>
+        <form action="/edit/<%= section.id %>" method="POST">
+          <button class="edit-button">Edit</button>
+        </form>
         <p class="content"><%= section.body %></p>
       </li>
     <%end%>

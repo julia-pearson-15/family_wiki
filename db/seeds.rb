@@ -33,90 +33,90 @@ User.destroy_all
 
 
 
-  a1 = Article.create({name: "House in Ghent", date_created: "01/03/2009", edit_date: "11/10/2015"})
-  u1 = User.create({name: "Larry Parson"})
+  # a1 = Article.create({name: "House in Ghent", date_created: "01/03/2009", edit_date: "11/10/2015"})
+  # u1 = User.create({name: "Larry Parson"})
   
-  a1.user_id = u1.id
-  a1.save
+  # a1.user_id = u1.id
+  # a1.save
   
-  s1 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
-  s1.article_id = a1.id
-  s1.save
-  s1 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
-  s1.article_id = a1.id
-  s1.save
-  s1 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
-  s1.article_id = a1.id
-  s1.save
+  # s1 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
+  # s1.article_id = a1.id
+  # s1.save
+  # s1 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
+  # s1.article_id = a1.id
+  # s1.save
+  # s1 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
+  # s1.article_id = a1.id
+  # s1.save
 
-  c1 = Comment.create({name: "it's so beautiful now!", body: "Please upload finished pictures! All done now?", date_created: "12/25/2009"})
-  c1.article_id = a1.id
-  c1 = Comment.create({name: "1997?", body: "Wow that's a really long time", date_created: "08/15/2012"})
-  c1.article_id = a1.id
-  c1.save
+  # c1 = Comment.create({name: "it's so beautiful now!", body: "Please upload finished pictures! All done now?", date_created: "12/25/2009"})
+  # c1.article_id = a1.id
+  # c1 = Comment.create({name: "1997?", body: "Wow that's a really long time", date_created: "08/15/2012"})
+  # c1.article_id = a1.id
+  # c1.save
   
-  cat1 = Category.create({name: "Marriage"})
-  a1.categories.push(cat1)
+  # cat1 = Category.create({name: "Marriage"})
+  # a1.categories.push(cat1)
 
 
 
 
 
-  # creating an article
-  a1 = Article.create({name: "Dan's DNA", date_created: "06/05/2011", edit_date: "12/05/2012"})
-  u1 = User.create({name: "Ally Bothell"})
+  # # creating an article
+  # a1 = Article.create({name: "Dan's DNA", date_created: "06/05/2011", edit_date: "12/05/2012"})
+  # u1 = User.create({name: "Ally Bothell"})
   
-  #giving it a user ID
-  a1.user_id = u1.id
-  a1.save
+  # #giving it a user ID
+  # a1.user_id = u1.id
+  # a1.save
   
-  #attatching a section to the article
-  s1 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
-  s1.article_id = a1.id
-  s1.save
-  s1 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
-  s1.article_id = a1.id
-  s1.save
-  s1 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
-  s1.article_id = a1.id
-  s1.save
+  # #attatching a section to the article
+  # s1 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
+  # s1.article_id = a1.id
+  # s1.save
+  # s1 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
+  # s1.article_id = a1.id
+  # s1.save
+  # s1 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
+  # s1.article_id = a1.id
+  # s1.save
 
-  c1 = Comment.create({name: "let's talk?", body: "Want to have coffee and discuss? Beautifully written!", date_created: "02/05/2015"})
-  c1.article_id = a1.id
-  c1 = Comment.create({name: "Update?", body: "Did you ever do the test?????", date_created: "08/15/2015"})
-  c1.article_id = a1.id
-  c1.save
+  # c1 = Comment.create({name: "let's talk?", body: "Want to have coffee and discuss? Beautifully written!", date_created: "02/05/2015"})
+  # c1.article_id = a1.id
+  # c1 = Comment.create({name: "Update?", body: "Did you ever do the test?????", date_created: "08/15/2015"})
+  # c1.article_id = a1.id
+  # c1.save
   
-  #putting the article in a category
-  cat1 = Category.create({name: "Comic"})
-  a1.categories.push(cat1)
-  cat1 = Category.create({name: "Parson Family"})
-  a1.categories.push(cat1)
+  # #putting the article in a category
+  # cat1 = Category.create({name: "Comic"})
+  # a1.categories.push(cat1)
+  # cat1 = Category.create({name: "Parson Family"})
+  # a1.categories.push(cat1)
 
 
 
-  a2 = Article.create({name: "Henry's Second Wife", date_created: "01/03/2013", edit_date: "06/05/2015"})
-  u2 = User.create({name: "Phylis Parson"})
+  # a2 = Article.create({name: "Henry's Second Wife", date_created: "01/03/2013", edit_date: "06/05/2015"})
+  # u2 = User.create({name: "Phylis Parson"})
  
-  a2.user_id = u2.id
-  a2.save
+  # a2.user_id = u2.id
+  # a2.save
  
-  s2 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
-  s2.article_id = a2.id
-  s2.save
-  s2 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
-  s2.article_id = a2.id
-  s2.save
-  s2 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
-  s2.article_id = a2.id
-  s2.save
+  # s2 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
+  # s2.article_id = a2.id
+  # s2.save
+  # s2 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
+  # s2.article_id = a2.id
+  # s2.save
+  # s2 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
+  # s2.article_id = a2.id
+  # s2.save
   
-  c2 = Comment.create({name: "Love the shout out!", body: "I'll fill this out more in depth when I have time!", date_created: "12/05/2015"})
-  c2.article_id = a2.id
-  c2.save
+  # c2 = Comment.create({name: "Love the shout out!", body: "I'll fill this out more in depth when I have time!", date_created: "12/05/2015"})
+  # c2.article_id = a2.id
+  # c2.save
  
-  cat2 = Category.create({name: "Marriage"})
-  a2.categories.push(cat2)
+  # cat2 = Category.create({name: "Marriage"})
+  # a2.categories.push(cat2)
 
 
 

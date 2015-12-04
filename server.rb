@@ -49,6 +49,19 @@ module App
       erb :login
     end
 
+    get "/new/article" do
+      erb :new_article
+    end
+
+    post "/new/article" do  
+      redirect ("/new/article")
+    end
+
+    post "/edit/:id" do
+      @section = Section.find_by(id: params["id"])
+      erb :edit_section
+    end
+
   end
 
 
