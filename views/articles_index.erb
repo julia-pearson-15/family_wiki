@@ -1,4 +1,6 @@
-<a class="link" href="/articles/new"><div class="new-article">+</div></a>
+<% if @this_user %>
+  <a class="link" href="/articles/new"><div class="new-article">+</div></a>
+<%end%>
 <ul>
   <% @articles.each do |article| %>
     <li class="listing">

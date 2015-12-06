@@ -8,7 +8,9 @@
       <li>
         <p class="section-name"> <%= section.name %> </p>
         <p class="date">last edited:  <%= section.edit_date %> </p>
-        <a class="edit-button" href="/articles/<%= @article.id %>/edit/<%= section.id%>">Edit</a>
+        <% if @this_user %>
+          <a class="edit-button" href="/articles/<%= @article.id %>/edit/<%= section.id%>">Edit</a>
+        <%end%>
         <p class="content"><%= section.body %></p>
 <!--         <p class="content"><%= $markdown.render(section.body) %></p> -->
       </li>
@@ -19,7 +21,9 @@
 <div class="comment-section">
   <p class="header">Comments:</p>
   <form action="/new/comment" method="POST">
-    <a class="link" href="/articles/<%= @article.id %>/comments/new"><div class="new-article">+</div></a>
+    <% if @this_user %>
+      <a class="link" href="/articles/<%= @article.id %>/comments/new"><div class="new-article">+</div></a>
+    <%end%>
   </form>
   <ul class="comment">
     <% @article.comments.each do |comment| %>

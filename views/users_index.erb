@@ -1,10 +1,16 @@
-<a class="link" href="/users/new"><div class="new-article">+</div></a>
+<% if @this_user %>
+  <a class="link" href="/users/new"><div class="new-article">+</div></a>
+<%end%>
 <ul>
   <% @users.each do |user| %>
     <li class="make-height" class="listing">
       <div class="to-the-left"><img class="user-image" src="<%= user.img_url %>"></div>
       <div class="to-the-right">
-      <a class="name" href="/users/<%= user.id %>"> <%= user.name %> </a>
+      <%if @this_user && user.id == @this_user.id %>
+        <a class="name" href="/users/<%= user.id %>">Me</a>
+      <%else%>
+        <a class="name" href="/users/<%= user.id %>"> <%= user.name %> </a>
+      <%end%>
       <p class="user-info"><%= user.email%></p>
       <p class="user-info">Age: <%= user.age%></p>
       </div> <!-- to-the-right -->

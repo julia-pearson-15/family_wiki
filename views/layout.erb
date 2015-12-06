@@ -9,7 +9,14 @@
 </head>
 <body>
   <div id="topbar">
-    <a id="login" href="/login">Log In</a>
+    <% if !@this_user %>
+      <a id="login" href="/login">Log In</a>
+    <%else%>
+      <form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button id="login">Log out!</button>
+      </form>
+    <%end%>
     <a href="/" ><img id="logo" src="/img/logo.jpg"></a>
     <div id="toolbar">
       <div class="with-bar">
