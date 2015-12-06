@@ -14,12 +14,14 @@ User.destroy_all
 #   {name: "Only One Egg", date_created: "01/03/2013", edit_date: "08/23/2015"}
 # ];
 
-# users = [
-#   {name: "Valerie Fish"},
-#   {name: "Nigel Parson"},
-#   {name: "Jamima Parson"},
-#   {name: "Suzane Bothell"}
-# ]
+users = [
+  {name: "Valerie Fish", age: 45, email: "val.Fish@gmail.com", img_url: "/img/valerie_image.png"},
+  {name: "Nigel Parson", age: 62, email: "nBparson@verizon.net", img_url: "/img/nigel_image.png"},
+  {name: "Jamima Parson", age: 22, email: "jamima.parson@gmail.com", img_url: "/img/jamima_image.png"},
+  {name: "Suzane Ozborn", age: 81, email: "anne.Ozborn@gmail.com", img_url: "/img/suzane_image.png"}
+]
+
+
 
 
 # comments = [
@@ -34,7 +36,7 @@ User.destroy_all
 
 
   a1 = Article.create({name: "House in Ghent", date_created: "01/03/2009", edit_date: "11/10/2015"})
-  u1 = User.create({name: "Larry Parson"})
+  u1 = User.create({name: "Larry Parson", age: 26, email: "larry.parson@gmail.com", img_url: "/img/larry_image.png"})
   
   a1.user_id = u1.id
   a1.save
@@ -65,7 +67,7 @@ User.destroy_all
 
   # creating an article
   a1 = Article.create({name: "Dan's DNA", date_created: "06/05/2011", edit_date: "12/05/2012"})
-  u1 = User.create({name: "Ally Bothell"})
+  u1 = User.create({name: "Ally Bothell", age: 21, email: "aboth@yahoo.com", img_url: "/img/ally_image.png"})
   
   #giving it a user ID
   a1.user_id = u1.id
@@ -98,7 +100,7 @@ User.destroy_all
 
 
   a2 = Article.create({name: "Henry's Second Wife", date_created: "01/03/2013", edit_date: "06/05/2015"})
-  u2 = User.create({name: "Phylis Parson"})
+  u2 = User.create({name: "Phylis Parson", age: 70, email: "phylis.parson@AOL.com", img_url: "/img/phylis_image.png"})
  
   a2.user_id = u2.id
   a2.save
@@ -125,7 +127,7 @@ User.destroy_all
 
 
   a1 = Article.create({name: "Oklahoma Porch", date_created: "11/05/2014", edit_date: "12/05/2014"})
-  u1 = User.create({name: "Betty Parson"})
+  u1 = User.create({name: "Betty Hidal", age: 90, email: "theBets@hotmail.com", img_url: "/img/betty_image.png"})
   
   a1.user_id = u1.id
   a1.save
@@ -161,6 +163,7 @@ User.destroy_all
   a1.categories.push(cat1)
 
 
+User.create(users)
  
 
 

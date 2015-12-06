@@ -36,7 +36,10 @@ CREATE TABLE sections (
 
 CREATE TABLE users (
   id INTEGER PRIMARY KEY,
-  name VARCHAR
+  name VARCHAR(255),
+  age INTEGER,
+  email TEXT,
+  img_url TEXT
 );
 
 CREATE TABLE sections_users (

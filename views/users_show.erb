@@ -1,6 +1,16 @@
 
+<!-- showing user info -->
+<div id="user-show">
+  <div class="to-the-left"><img class="user-image" src="<%= @user.img_url%>"></div>
+  <div class="to-the-right">
+    <a class="name" href="/users/<%= @user.id %>"> <%= @user.name %> </a>
+    <p class="user-info"><%= @user.email%></p>
+    <p class="user-info">Age: <%= @user.age%></p>
+  </div> <!-- to-the-right -->
+</div>
 <ul>
-  <p class="header"><%=@user.name%>'s articles:</p>
+  <!-- getting user's first name: -->
+  <p class="header"><%=@user.name.split(" ")[0]%>'s articles:</p>
   <% @articles.each do |article| %>
     <li class="listing">
       <a class="name" href="/articles/<%= article.id %>"> <%= article.name %> </a>

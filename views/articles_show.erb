@@ -15,13 +15,12 @@
     <%end%>
   </ul> <!-- section -->
 </div> <!-- article -->
-<p></p>
+<p></p><!--  just for space -->
 <div class="comment-section">
-  <p class="header">Comments</p>
-  <form action="/new/article" method="POST">
-    <button class="new-article">+</button>
+  <p class="header">Comments:</p>
+  <form action="/new/comment" method="POST">
+    <a class="link" href="/articles/<%= @article.id %>/comments/new"><div class="new-article">+</div></a>
   </form>
-  <p>--</p>
   <ul class="comment">
     <% @article.comments.each do |comment| %>
     <li>

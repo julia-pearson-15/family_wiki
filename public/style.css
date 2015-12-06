@@ -81,12 +81,7 @@ body{
 }
 .listing{
   list-style: none;
-  /*  height: 150px;*/
   box-shadow: 0px 2px  #e6e6e6;
-  /*  border: solid;
-  border-color: lightgrey;
-  border-radius: 2px;
-  border-width: 1px;*/
   padding: 15px;
   position: relative;
   right: 15px;
@@ -168,6 +163,7 @@ body{
 .header{
   font-size: 16px;
   color: grey;
+  line-height: 2.5;
 }
 .sections{
   list-style: none;
@@ -190,5 +186,35 @@ body{
 .editing-name{
   display: block;
 
+}
+.user-image{
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+}
+.to-the-left{
+  float: left;
+}
+.to-the-right{
+  position: relative;
+  left: 20px;
+}
+.make-height{
+  height: 120px;
+  list-style: none;
+  box-shadow: 0px 2px  #e6e6e6;
+}
+.user-info{
+  color: lightgrey;
+  font-size: 12px;
+  line-height: 1;
+}
+#user-show{
+  list-style: none;
+  box-shadow: 0px 2px  #e6e6e6;
+  padding: 15px;
+  position: relative;
+  right: 0px;
+  color: rgb(255,73,76);
 }
 
