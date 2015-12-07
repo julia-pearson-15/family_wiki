@@ -3,6 +3,7 @@ require_relative "../config"
 class CreateUsers < ActiveRecord::Migration
   def up
     create_table :users do |t|
+      t.string (:password_digest)
       t.string (:name)
       t.integer (:age)
       t.text (:email)

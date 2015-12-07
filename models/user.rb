@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_secure_password
   #user writes articles
   has_many :articles
   #user (author) writes comment

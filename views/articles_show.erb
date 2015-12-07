@@ -12,14 +12,25 @@
         <% if @this_user %>
           <a class="edit-button" href="/articles/<%= @article.id %>/edit/<%= section.id%>">Edit</a>
         <%end%>
-        <p class="content"><%= section.body %></p>
-<!--         <p class="content"><%= $markdown.render(section.body) %></p> -->
+        <p class="content"><%= $markdown.render(section.body) %></p>
       </li>
     <%end%>
     <% if @this_user %>
       <a class="link" href="/articles/<%= @article.id %>/sections/new"><div class="new-article">+</div></a>
     <%end%> 
   </ul> <!-- section -->
+  <p class="header"> Categories: </p>
+  <% if @this_user %>
+      <a class="to-the-right link" href="/articles/<%= @article.id %>/categories/new"><div class="new-article" >+</div></a>
+    <%end%> 
+  <ul class="categories">
+    <% @article.categories.each do |category| %>
+      <li>
+        <a class="category" href="/categories/<%=category.id%>"> <%= category.name %> </a>
+        <p class="break"> --- </p>
+      </li>
+    <%end%>
+  </ul> <!-- categories -->
 </div> <!-- article -->
 <p></p><!--  just for space -->
 <div class="comment-section">

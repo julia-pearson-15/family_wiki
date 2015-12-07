@@ -14,7 +14,7 @@ module App
     end
 
     post "/sessions" do
-      @user = User.find_by({name: params[:name]})
+      @user = User.find_by({name: params[:name]}).try(:authenticate, params[:password])
       session[:user_id] = @user.id
 
       redirect to "/"
@@ -55,7 +55,7 @@ module App
 
       section = Section.create({name: params[:section_one_name], body: params[:section_one_body]})
 
-      redirect to ("/articles/#{article.id}")
+      redirect to "/articles/#{article.id}"
     end
 
     get "/articles/:id" do
@@ -71,7 +71,23 @@ module App
     get "/categories" do
       @this_user = User.find(session[:user_id]) if session[:user_id]
       @categories = Category.all 
+
       erb :categories_index
+    end
+
+    get "/articles/:article_id/categories/new" do
+      @article = Article.find_by(id: params["article_id"])
+
+      erb :new_catergory
+    end
+
+    post "/articles/:article_id/categories/new" do
+      c = Category.create(name: params["name"])
+      article = Article.find_by(id: params["article_id"])
+      article.categories.push(c)
+
+      redirect to "/articles/#{article.id}"
+      # 
     end
 
     get "/categories/:id" do
@@ -85,17 +101,25 @@ module App
     get "/users" do
       @this_user = User.find(session[:user_id]) if session[:user_id]
       @users = User.all 
+
       erb :users_index
     end
 
     get "/users/new" do
       @this_user = User.find(session[:user_id]) if session[:user_id]
+
       erb :new_user
     end
 
     post "/users/new" do
-      user = User.create({name: params[:name], age: params[:age], email: params[:email], img_url: params[:image_url]})
-
+      user = User.create({
+        name: params[:full_name], 
+        age: params[:age], 
+        email: params[:email], 
+        img_url: params[:image_url], 
+        password: params[:password], 
+        password_confirmation: params[:password_confirmation]
+      })
       redirect to "/users"
     end
 
@@ -128,6 +152,7 @@ module App
     get "/articles/:article_id/sections/new" do
       @this_user = User.find(session[:user_id]) if session[:user_id]
       @article = Article.find_by(id: params["article_id"])
+
       erb :new_section
     end
 
@@ -137,7 +162,7 @@ module App
       section.users.push(User.find(session[:user_id]))
       section.save
 
-      redirect to ("/articles/#{params[:article_id]}")
+      redirect to "/articles/#{params["article_id"]}"
     end
 
     get "/articles/:article_id/comments/new" do
@@ -154,7 +179,7 @@ module App
       comment.article_id = article.id
       comment.save
 
-      redirect to ("/articles/#{params[:article_id]}")
+      redirect to "/articles/#{params[:article_id]}"
     end
 
 

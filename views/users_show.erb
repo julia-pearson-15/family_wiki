@@ -26,8 +26,27 @@
       <a class="user" href="/users/<%= @user.id %>"><%=article.user.name %></a>
       <p class="date"> date created: <%= article.date_created %> </p>
       <p class="date"> last edited:  <%= article.edit_date %> </p>
-      <p class="content"><%= Section.where(article.id).first.body  %></p> 
+      <p></p>
     </li>
+    <p></p>
+  <%end%>
+</ul>
+<ul>
+  <%if @this_user && @user.id == @this_user.id %>
+    <p class="header">Sections I contributed to:</p>
+  <%else%>
+    <p class="header">Sections <%=@user.name.split(" ")[0]%> contributed to:</p>
+  <%end%>
+  <% @user.sections.each do |section| %>
+  <!-- only print the sections for articles user did not author -->
+    <%if section.article.user != @user%>
+      <li class="listing">
+        <a class="name" href="/articles/<%= section.article.id %>"> <%= section.article.name %> </a>
+        <a class="user" href="/users/<%= @user.id %>"><%=section.article.user.name %></a>
+        <p class="date"> date created: <%= section.article.date_created %> </p>
+        <p></p>
+      </li>
+    <%end%>
     <p></p>
   <%end%>
 </ul>

@@ -223,13 +223,13 @@ body{
 }
 .welcome-message{
   border-color: rgb(99, 172, 255);
-  font-size: 20px;
+  font-size: 18px;
 }
 .welcome-box{
   padding: 10px;
 }
 #homepage{
-  width: 95%;
+  width: 100%;
   display: block;
   margin: 0 auto;
 /*  height: 200px;*/
@@ -239,5 +239,24 @@ body{
   color: (255,73,76);
   border: none;
   font-size: 15px;
+}
+.category{
+  color: rgb(99,172,255);
+  text-decoration: none;
+  font-size: 11px;
+  float: left;
+}
+.categories{
+  list-style: none;
+}
+.break{
+  display: block;
+  font-size: 11px;
+  color: white;
+  text-decoration: none;
+  float: left;  
+}
+.in-block{
+  display: block;
 }
 

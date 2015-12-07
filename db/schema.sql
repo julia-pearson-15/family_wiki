@@ -36,6 +36,7 @@ CREATE TABLE sections (
 
 CREATE TABLE users (
   id INTEGER PRIMARY KEY,
+  password_digest VARCHAR,
   name VARCHAR(255),
   age INTEGER,
   email TEXT,

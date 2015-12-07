@@ -1,19 +1,23 @@
 // will be the header and general page layout
 // make able to click on tabs
 
-var $navBar;
+  // var $navBarOne;
+  // var $navBarTwo;
+  // var $navBarThree;
 
-var moving = function($element){
-  var closure = function(){
-    $element.addClass('animated', 'bounce');
-  } 
-  return closure;
-}
+
 
 $(document).ready(function() {
-  $navBarOne = $('.nav')[0];
-  $navBarTwo = $('.nav')[1];
-  $navBarThree = $('.nav')[2];
+  var $navBarOne = $('.with-bar')[0];
+  var $navBarTwo = $('.with-bar')[1];
+  var $navBarThree = $('.with-bar')[2];
+  
+  var moving = function($element){
+    var closure = function(){
+      $element.addClass('animated', 'bounce');
+    } 
+    return closure;
+  }
   
   $navBarOne.on('focus', moving($navBarOne));
   $navBarTwo.on('focus', moving($navBarTwo));

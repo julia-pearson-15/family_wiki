@@ -5,7 +5,7 @@
       <a class="user" href="/users/<%= article.user.id %>"> <%=article.user.name %></a>
       <p class="date"> date created: <%= article.date_created %> </p>
       <p class="date"> last edited:  <%= article.edit_date %> </p>
-      <p class="content"> <%= Section.where(article.id).first.body  %></p> 
+      <p></p>
     </li>
     <p></p>
   <%end%>

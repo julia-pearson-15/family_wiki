@@ -20,3 +20,7 @@ Will go in users_show.erb, at the bottom. Why isn't this working??
     <p></p>
   <%end%>
 </ul>
+
+
+from categories_show
+<p class="content"><%= $markdown.render(<%= Section.where(article.id).first.body)  %></p>
