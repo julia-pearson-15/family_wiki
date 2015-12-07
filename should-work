@@ -1,0 +1,22 @@
+Will go in users_show.erb, at the bottom. Why isn't this working??
+
+<%if @this_user && @user.id == @this_user.id %>
+  <p class="header">Sections I contributed to:</p>
+<%else%>
+  <p class="header">Sections <%=@user.name.split(" ")[0]%> contributed to:</p>
+<%end%>
+<ul>
+  <% @user.sections.each do |section| %>
+  <!-- only print the sections for articles user did not author -->
+    <%if section.article.user != @user%>
+      <li class="listing">
+        <a class="name" href="/articles/<%= section.article.id %>"> <%= section.article.name %> </a>
+        <a class="user" href="/users/<%= @user.id %>"><%=section.article.user.name %></a>
+        <p class="date"> date created: <%= section.article.date_created %> </p>
+        <p class="name"> <%= section.name %> </p>
+        <p class="content"><%= section.body %></p> 
+      </li>
+    <%end%>
+    <p></p>
+  <%end%>
+</ul>

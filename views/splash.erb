@@ -1,5 +1,11 @@
 <% if @this_user %>
-  <h1>Hi <%= @this_user.name %>!</h1>
+  <h1 class="welcome">Hi <%= @this_user.name %>!</h1>
 <% else %>
-  <h1>Hi and welcome to Get the Record!</h1>
+  <div class="welcome-box">
+    <h1 class="welcome">Hi and welcome to Get the Record!</h1>
+    <p class="welcome-message"> On this site you can write, contribute, and contest your family's stories.</p>
+    <p class="welcome-message">Write grandpa Bob's bio or update news on your favortie niece.</p>
+    <p class="welcome-message">Don't believe what you see? Change it up! Let your family come to a common consensus about whether Susan ever was a spy for or against the Soviet Union.</p>
+  </div>
 <%end%>
+<!-- <img id="homepage" src="/img/home_page.jpg"> -->

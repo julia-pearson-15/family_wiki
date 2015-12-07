@@ -1,5 +1,15 @@
 <form action="/sessions" method="POST">
-  <input type="text" name="name" placeholder="Your name="" !">
+  <input type="text" name="name" placeholder="Enter full name">
   <!-- <input type="password" name="password" placeholder="Your password!"> -->
-  <button>Log In</button>
+  <button id="change-button">Log In</button>
+</form>
+
+<p>Don't have an account? Sign up bellow!</p>
+<form action="/signup" method="POST">
+  <input type="text" name="full name" placeholder="Enter full name">
+<!-- <input type="password" name="password" placeholder="Your password!"> -->
+  <input type="number" name="age" placeholder="Enter age">
+  <input type="text" name="email" placeholder="email">
+  <input type="text" name="img_url" placeholder="profile picture URL">
+  <button id="change-button">Sign Up!</button>
 </form>

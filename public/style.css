@@ -32,7 +32,7 @@ body{
 }
 .nav{
   color: rgb(255,73,76);
-  font-size: 15px;
+  font-size: 20px;
   height: 1px;
   float: top;
   text-decoration: none;
@@ -104,7 +104,7 @@ body{
 }
 .user{
   display: block;
-  font-size: 15px;
+  font-size: 11px;
   line-height: .3;
   color: rgb(99,172,255);
   text-decoration: none;
@@ -216,5 +216,28 @@ body{
   position: relative;
   right: 0px;
   color: rgb(255,73,76);
+}
+.welcome{
+  color: rgb(255,73,76);
+  font-size: 30px;
+}
+.welcome-message{
+  border-color: rgb(99, 172, 255);
+  font-size: 20px;
+}
+.welcome-box{
+  padding: 10px;
+}
+#homepage{
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+/*  height: 200px;*/
+}
+#change-button{
+  background-color: white;
+  color: (255,73,76);
+  border: none;
+  font-size: 15px;
 }
 

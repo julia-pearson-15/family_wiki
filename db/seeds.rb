@@ -24,14 +24,14 @@ users = [
 
 
 
-# comments = [
+# # comments = [
 
-#   [ {name: "That kitchen", body: "I remember making pancakes there all the time. The stove was epic", date_created: "12/25/2011"},
-#     {name: "Looks better in pictures", body: "", date_created: "08/15/2012"},
-#     {name: "Was that creek ever swim-able?", body: "I don't remeber ever dipping in.", date_created: "08/15/2012"}],
-#   [ {name: "BEST.PLACE.EVER", body: "How are those beets so good. Also the bread. Also the shirley temples - no shame.", date_created: "11/15/2012"}],
-#   [ {name: "Such a shame", body: "Have to get another one of those", date_created: "08/15/2014"}]
-# ]
+# #   [ {name: "That kitchen", body: "I remember making pancakes there all the time. The stove was epic", date_created: "12/25/2011"},
+# #     {name: "Looks better in pictures", body: "", date_created: "08/15/2012"},
+# #     {name: "Was that creek ever swim-able?", body: "I don't remeber ever dipping in.", date_created: "08/15/2012"}],
+# #   [ {name: "BEST.PLACE.EVER", body: "How are those beets so good. Also the bread. Also the shirley temples - no shame.", date_created: "11/15/2012"}],
+# #   [ {name: "Such a shame", body: "Have to get another one of those", date_created: "08/15/2014"}]
+# # ]
 
 
 
@@ -43,12 +43,15 @@ users = [
   
   s1 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
   s1.article_id = a1.id
+  s1.users.push(a1.user)
   s1.save
   s1 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
   s1.article_id = a1.id
+  s1.users.push(a1.user)
   s1.save
   s1 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
   s1.article_id = a1.id
+  s1.users.push(a1.user)
   s1.save
 
   c1 = Comment.create({name: "it's so beautiful now!", body: "Please upload finished pictures! All done now?", date_created: "12/25/2009"})
@@ -76,12 +79,15 @@ users = [
   #attatching a section to the article
   s1 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
   s1.article_id = a1.id
+  s1.users.push(a1.user)
   s1.save
   s1 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
   s1.article_id = a1.id
+  s1.users.push(a1.user)
   s1.save
   s1 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
   s1.article_id = a1.id
+  s1.users.push(a1.user)
   s1.save
 
   c1 = Comment.create({name: "let's talk?", body: "Want to have coffee and discuss? Beautifully written!", date_created: "02/05/2015"})
@@ -107,12 +113,15 @@ users = [
  
   s2 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
   s2.article_id = a2.id
+  s2.users.push(a2.user)
   s2.save
   s2 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
   s2.article_id = a2.id
+  s2.users.push(a2.user)
   s2.save
   s2 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
   s2.article_id = a2.id
+  s2.users.push(a2.user)
   s2.save
   
   c2 = Comment.create({name: "Love the shout out!", body: "I'll fill this out more in depth when I have time!", date_created: "12/05/2015"})
@@ -134,12 +143,15 @@ users = [
   
   s1 = Section.create({name: "Overview", body: "ldsfnsdlknflkdsnfndslknflkndslknflksdnlkfnsdlknflksdnlkfnlknsdlkfnlskdnflkdsnlkfnlkdsn", edit_date: "12/05/2014"})
   s1.article_id = a1.id
+  s2.users.push(a2.user)
   s1.save
   s1 = Section.create({name: "Who's involved", body: "ldkfndslkflndslknflkndslnflkdnslknflkdsnlkfnlksdnlkfnlkdsnlfknlkdsnflksdnlkfnlsd", edit_date: "12/05/2015"})
   s1.article_id = a1.id
+  s2.users.push(a2.user)
   s1.save
   s1 = Section.create({name: "Reference", body: "xzlklkxzlhflkdnlrkelkdscnoizxlkfslknalksnasknmdkljxkmclksnieflkdlkcxhlkcnxz", edit_date: "12/10/2015"})
   s1.article_id = a1.id
+  s2.users.push(a2.user)
   s1.save
 
   c1 = Comment.create({name: "Reference?", body: "Can you send me the article you found? Or at least link it.", date_created: "02/05/2015"})

@@ -7,6 +7,7 @@
     <% @article.sections.each do |section| %>
       <li>
         <p class="section-name"> <%= section.name %> </p>
+        <a class="user" href="/users/<%= @article.user.id %>"><%=section.users.last.name %></a>
         <p class="date">last edited:  <%= section.edit_date %> </p>
         <% if @this_user %>
           <a class="edit-button" href="/articles/<%= @article.id %>/edit/<%= section.id%>">Edit</a>
@@ -15,6 +16,9 @@
 <!--         <p class="content"><%= $markdown.render(section.body) %></p> -->
       </li>
     <%end%>
+    <% if @this_user %>
+      <a class="link" href="/articles/<%= @article.id %>/sections/new"><div class="new-article">+</div></a>
+    <%end%> 
   </ul> <!-- section -->
 </div> <!-- article -->
 <p></p><!--  just for space -->
@@ -29,7 +33,7 @@
     <% @article.comments.each do |comment| %>
     <li>
       <p class="name"> <%= comment.name %> </p>
-      <a class="user" href="/articles/<%= @article.id %>"><%=@article.user.name %></a>
+      <a class="user" href="/articles/<%= @article.id %>"><%=comment.user.name %></a>
       <p class="date">last edited:  <%= comment.date_created %> </p>
       <p class="content"><%= comment.body %></p>
     </li>

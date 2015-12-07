@@ -119,14 +119,31 @@ module App
       section.name= params["name"]
       section.body= params["body"]
       section.edit_date= DateTime.now
+      section.users.push(User.find(session[:user_id]))
       section.save
 
       redirect to "/articles/#{params["article_id"]}"
     end
 
+    get "/articles/:article_id/sections/new" do
+      @this_user = User.find(session[:user_id]) if session[:user_id]
+      @article = Article.find_by(id: params["article_id"])
+      erb :new_section
+    end
+
+    post "/articles/:article_id/sections/new" do
+      section = Section.create({name: params["name"], body: params["body"], edit_date: DateTime.now})
+      section.article_id = params[:article_id]
+      section.users.push(User.find(session[:user_id]))
+      section.save
+
+      redirect to ("/articles/#{params[:article_id]}")
+    end
+
     get "/articles/:article_id/comments/new" do
       @this_user = User.find(session[:user_id]) if session[:user_id]
       @article=Article.find(params[:article_id])
+
       erb :new_comment
     end
 
