@@ -17,7 +17,7 @@ CreateArticleCategory.migrate(ARGV[0])
 
 require_relative "../config"
 
-class SectionUser < ActiveRecord::Migration
+class CreateSectionUser < ActiveRecord::Migration
   def up
     create_table :sections_users do |t|
       t.integer (:section_id) 
