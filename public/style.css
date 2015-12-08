@@ -1,4 +1,3 @@
-/*will be the style for header and general page layout*/
 body{
   font-family: Interstate;
 }
@@ -8,9 +7,8 @@ body{
   display: block;
   top: 25px;
   left: 25px;
-/*  box-shadow: 2px 2px 2px #f2f2f2;*/
 }
-#login{
+.login{
   position: absolute;
   right: 10%;
   color: rgb(99,172,255);

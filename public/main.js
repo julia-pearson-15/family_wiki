@@ -4,15 +4,17 @@ var $navBarOne;
 var $navBarOne;
 var $navBarOne;
 
-var moving = function(){
-  $(this).addClass('animated');
-  $(this).addClass('pulse');
-  setTimeout(noMove, 150);
-} 
 var noMove = function(){
   $(this).removeClass('animated');
   $(this).removeClass('pulse');
-}
+};
+
+var moving = function(){
+  $(this).addClass('animated');
+  $(this).addClass('pulse');
+  setTimeout(noMove, 500);
+} 
+
 
 
 $(document).ready(function() {
