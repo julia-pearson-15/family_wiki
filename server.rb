@@ -75,21 +75,6 @@ module App
       erb :categories_index
     end
 
-    get "/articles/:article_id/categories/new" do
-      @article = Article.find_by(id: params["article_id"])
-
-      erb :new_catergory
-    end
-
-    post "/articles/:article_id/categories/new" do
-      c = Category.create(name: params["name"])
-      article = Article.find_by(id: params["article_id"])
-      article.categories.push(c)
-
-      redirect to "/articles/#{article.id}"
-      # 
-    end
-
     get "/categories/:id" do
       @this_user = User.find(session[:user_id]) if session[:user_id]
       @category = Category.find_by(id: params["id"])
@@ -182,6 +167,20 @@ module App
       redirect to "/articles/#{params[:article_id]}"
     end
 
+    get "/articles/:article_id/categories/new" do
+      @article = Article.find_by(id: params["article_id"])
+
+      erb :new_catergory
+    end
+
+    post "/articles/:article_id/categories/new" do
+      c = Category.create(name: params["name"])
+      article = Article.find_by(id: params["article_id"])
+      article.categories.push(c)
+
+      redirect to "/articles/#{article.id}"
+      # 
+    end
 
     get "/login" do
 
